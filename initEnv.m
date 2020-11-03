@@ -1,4 +1,3 @@
-%
 % 1 - Check if version requirements
 % are satisfied and the packages are
 % are installed/loaded:
@@ -56,8 +55,8 @@ function initEnv
 
     if numel(dir(libDirectory)) <= 2 % Means that the external is empty
         error(['Git submodules are not cloned!', ...
-              'Try this in your terminal:', ...
-              ' git submodule update --recursive ']);
+               'Try this in your terminal:', ...
+               ' git submodule update --recursive ']);
     else
         addDependencies();
     end
@@ -98,10 +97,10 @@ end
 
 function addDependencies()
 
-  pth = fileparts(mfilename('fullpath'));
-  addpath(fullfile(pth, 'lib', 'check_my_code'));
-  addpath(genpath(fullfile(pth, 'lib', 'CPP_BIDS_SPM_pipeline', 'src')));
-  addpath(genpath(fullfile(pth, 'lib', 'CPP_BIDS_SPM_pipeline', 'lib')));
-  addpath(fullfile(pth, 'src'));
+    pth = fileparts(mfilename('fullpath'));
+    addpath(fullfile(pth, 'lib', 'check_my_code'));
+    addpath(genpath(fullfile(pth, 'lib', 'CPP_BIDS_SPM_pipeline', 'src')));
+    addpath(genpath(fullfile(pth, 'lib', 'CPP_BIDS_SPM_pipeline', 'lib')));
+    addpath(fullfile(pth, 'src'));
 
 end
