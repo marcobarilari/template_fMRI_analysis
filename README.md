@@ -12,6 +12,31 @@
 
 # Template repository for matlab analysis project
 
+## How to install and use this template
+
+### Install with Git
+
+1. Click the green button `Use this template`.
+
+1. Give a name to the repository you want to create. 
+   Something short that contains the name of your experiment: `analysis_fMRI_FaceLocalizer`.
+
+1. Decide if you want this new repo to be public or private.
+
+1. Click on `Create repository from template`
+
+You now have a copy of the template on your Github account. 
+You can then download the code and the pre-set dependencies like this.
+
+1. Click on green `Download` button and copy the `URL_to_your_repo` that is shown there.
+
+1. Open a terminal and type this:
+
+```bash
+git clone --recurse-submodules URL_to_your_repo
+```
+
+This will set up everything automatically in your current directory.
 
 ## Content
 
@@ -34,7 +59,7 @@
 │       └── moxunit.yml # a yaml file that defines a github action
 ├── lib # where you put the code from external libraries (mathworks website or other github repositories)
 │   └── README.md
-├── src # where you put your code
+├── src # WHERE YOU PUT YOUR CODE
 │   ├── README.md
 │   └── miss_hit.cfg
 ├── tests # where you put your unit tests
@@ -54,55 +79,7 @@
 
 More on this [here](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html)
 
-```bash
-# create env
-conda create --name crc_nighres python=3.7 
-
-# activate it
-conda activate crc_nighres
-
-# deactivate it
-conda deactivate
-
-# export package list in the env into a YAML file
-conda env export > environment.yml
-
-# create env from YAML file
-conda env create -f environment.yml
-
-```
-
-- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
-
 ## Testing your code
 
 ## Continuous integration
-
-## How to install and use this template
-
-### Download with git
-
-``` bash
-cd fullpath_to_directory_where_to_install
-# use git to download the code
-git clone https://github.com/cpp-lln-lab/CPP_BIDS.git
-# move into the folder you have just created
-cd CPP_BIDS
-# add the src folder to the matlab path and save the path
-matlab -nojvm -nosplash -r "addpath(fullfile(pwd, 'src')); savepath ();"
-```
-
-Then get the latest commit:
-```bash
-# from the directory where you downloaded the code
-git pull origin master
-```
-
-To work with a specific version, create a branch at a specific version tag number
-```bash
-# creating and checking out a branch that will be called version1 at the version tag v0.0.1
-git checkout -b version1 v0.0.1
-```
-
-
 
